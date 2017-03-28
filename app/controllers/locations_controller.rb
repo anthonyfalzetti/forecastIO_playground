@@ -24,6 +24,8 @@ class LocationsController < ApplicationController
   # POST /locations
   # POST /locations.json
   def create
+    byebug
+    find_coordinates(location_params)
     @location = Location.new(location_params)
 
     respond_to do |format|
