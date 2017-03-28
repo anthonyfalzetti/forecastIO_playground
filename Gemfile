@@ -34,11 +34,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'dotenv', '~> 2.2'
 gem 'forecast_io', '~> 2.0', '>= 2.0.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'awesome_print'
   gem 'byebug', platform: :mri
+  gem 'dotenv-rails'
   gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 end
