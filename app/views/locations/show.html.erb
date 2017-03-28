@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to locations_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_location_path(@location), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show location</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Zip:</dt>
+  <dd><%= @location.zip %></dd>
+
+  <dt>Lat:</dt>
+  <dd><%= @location.lat %></dd>
+
+  <dt>Long:</dt>
+  <dd><%= @location.long %></dd>
+
+  <dt>Tempature:</dt>
+  <dd><%= @location.tempature %></dd>
+
+</dl>
