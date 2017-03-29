@@ -1,5 +1,5 @@
 module LocationsHelper
   def find_coordinates(params)
-    zip = params["zip"]
+    address = params["address"]
   end
 end

@@ -6,7 +6,7 @@ feature 'Creating Locations' do
 
     click_link 'New Location'
 
-    fill_in 'Zip', with: '80202'
+    fill_in 'Address', with: '80202'
 
     click_button 'Create Location'
 
@@ -18,9 +18,11 @@ feature 'Creating Locations' do
 
     click_link 'New Location'
 
-    fill_in 'Zip', with: '80234'
+    fill_in 'Address', with: '80234'
     click_button 'Create Location'
 
-    expect(page).to have_content("80234 39.842285 -105.043716")
+    expect(page).to have_content("Address: 80234")
+    expect(page).to have_content("Latitude: 39.9122468")
+    expect(page).to have_content("Longitude: -105.0031457")
   end
 end
